@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "Chatako Food Deals",
+    "slug": "food-discovery-pilot",
+    "scheme": "bitelocal",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "experiments": {
+      "tsconfigPaths": true
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "name": "Chatako – Good food. Better deals.",
+      "shortName": "Chatako",
+      "themeColor": "#fb5c32",
+      "backgroundColor": "#fff9f2"
+    },
+    "android": {
+      "package": "com.bitelocal.pilot",
+      "permissions": [
+        "INTERNET",
+        "POST_NOTIFICATIONS"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      "expo-image-picker",
+      "expo-font"
+    ]
+  }
+}

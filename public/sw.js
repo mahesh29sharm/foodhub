@@ -1,0 +1,3 @@
+/* Browser background notifications. Messages originate only from our authenticated web-push dispatcher. */
+self.addEventListener('push',function(event){let data={title:'BiteLocal',body:'You have an update',url:'/merchant'};try{data={...data,...event.data.json()}}catch{};event.waitUntil(self.registration.showNotification(data.title,{body:data.body,icon:'/favicon.ico',badge:'/favicon.ico',data:{url:data.url||'/'},tag:data.tag||undefined,vibrate:[170,70,170],renotify:false}))});
+self.addEventListener('notificationclick',function(event){event.notification.close();event.waitUntil(clients.openWindow(event.notification.data?.url||'/'))});

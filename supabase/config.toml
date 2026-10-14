@@ -1,0 +1,10 @@
+# Functions that must receive third-party webhooks / secured cron calls without a Supabase user JWT.
+[functions.fd-razorpay-webhook]
+verify_jwt = false
+[functions.fd-whatsapp-webhook]
+verify_jwt = false
+[functions.fd-dispatch-notifications]
+verify_jwt = false
+[functions.fd-daily-digest]
+verify_jwt = false
+# All customer- and merchant-invoked functions retain default JWT verification.
